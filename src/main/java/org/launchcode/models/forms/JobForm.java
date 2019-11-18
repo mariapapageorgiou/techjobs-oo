@@ -22,20 +22,20 @@ public class JobForm {
     @NotNull
     private int employerId;
 
+    @NotNull
+    private int locationId;
+
+    @NotNull
+    private int coreCompetencyId;
+
+    @NotNull
+    private int positionTypeId;
+
     /*
         TODO #3 - Included other fields needed to create a job,
         with correct validation attributes and display names.
         Don't forget to add getters and setters
      */
-
-    @NotNull
-    private int locationsId;
-
-    @NotNull
-    private int coreCompetenciesId;
-
-    @NotNull
-    private int positionTypesId;
 
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
@@ -49,7 +49,6 @@ public class JobForm {
         /*
             TODO #4 - populate the other ArrayList collections needed in the view
         */
-
 
         employers = jobData.getEmployers().findAll();
         locations = jobData.getLocations().findAll();
@@ -72,6 +71,30 @@ public class JobForm {
 
     public void setEmployerId(int employerId) {
         this.employerId = employerId;
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    public int getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(int coreCompetencyId) {
+        this.coreCompetencyId = coreCompetencyId;
+    }
+
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
     }
 
     public ArrayList<Employer> getEmployers() {
@@ -104,28 +127,5 @@ public class JobForm {
 
     public void setPositionTypes(ArrayList<PositionType> positionTypes) {
         this.positionTypes = positionTypes;
-    }
-
-    public int getLocationsId() {
-        return locationsId;
-    }
-
-    public int getCoreCompetenciesId() {
-        return coreCompetenciesId;
-    }
-
-    public int getPositionTypesId() {
-        return positionTypesId;
-    }
-    public void setLocationsId(int locationsId) {
-        this.locationsId = locationsId;
-    }
-
-    public void setCoreCompetenciesId(int coreCompetenciesId) {
-        this.coreCompetenciesId = coreCompetenciesId;
-    }
-
-    public void setPositionTypesId(int positionTypesId) {
-        this.positionTypesId = positionTypesId;
     }
 }
